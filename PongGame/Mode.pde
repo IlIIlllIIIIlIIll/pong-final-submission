@@ -1,35 +1,35 @@
 //Global Variables
 boolean modeOn = false;
-boolean dmai = false;//drop down menu for ai
-boolean mai = false, eai = false, screenSaver = false;//hard ai, medium ai, easy ai
+boolean dmPractice = false;//drop down menu for ai
+boolean mPractice = false, ePractice = false, infinite   = false;//hard ai, medium ai, easy ai
 //
 void setupMode() {
-  Button onePlayer = new Button(referenceMes, height/10, width/6, height/8, 0);
-  Button twoPlayer = new Button(onePlayer.x+width/6+referenceMes/2, onePlayer.y, width/6, height/8, 0);
-  Button hai = new Button(onePlayer.x, onePlayer.y+onePlayer.h+(referenceMes/2), width/6, height/14, 0);
-  Button mai = new Button(onePlayer.x, hai.y+hai.h+(referenceMes/2), width/6, height/14, 0);
-  Button eai = new Button(onePlayer.x, mai.y+mai.h+(referenceMes/2), width/6, height/14, 0);
-  Button screenSaver = new Button(twoPlayer.x+width/6+referenceMes/2, twoPlayer.y, width/6, height/8, 0);
+  Button soloMode = new Button(referenceMes, height/10, width/6, height/8, 0);
+  Button duoMode = new Button(soloMode.x+width/6+referenceMes/2, soloMode.y, width/5, height/8, 0);
+  Button Deathwish = new Button(soloMode.x, soloMode.y+soloMode.h+(referenceMes/2), width/5, height/14, 0);
+  Button mPractice = new Button(soloMode.x, Deathwish.y+Deathwish.h+(referenceMes/2), width/5, height/14, 0);
+  Button ePractice = new Button(soloMode.x, mPractice.y+mPractice.h+(referenceMes/2), width/5, height/14, 0);
+  Button infinite   = new Button(duoMode.x+width/6+referenceMes/2, duoMode.y, width/5, height/8, 0);
   RectText musicSettings = new RectText(width-referenceMes-width/6, height/10, width/6, height/8, secondaryColor);
-  Button muteSong = new Button(width-width/6-referenceMes, twoPlayer.y, width/6, height/14, 0);
+  Button muteSong = new Button(width-width/6-referenceMes, duoMode.y, width/6, height/14, 0);
   Button muteSFX = new Button(musicSettings.x, muteSong.y+muteSong.h+(referenceMes/2), width/6, height/14, 0);
-  Button nightMode = new Button(screenSaver.x+screenSaver.w+referenceMes/2, screenSaver.y, width/6, height/8, 0);
-  twoPlayer.variablesUpdate(0, 0, 0, 0, twoPlayer.x, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-  onePlayer.variablesUpdate(0, 0, 0, 0, 0, onePlayer.x, 0, 0, 0, 0, 0, 0, 0, 0);
-  hai.variablesUpdate(0, 0, 0, 0, 0, 0, hai.x, 0, 0, 0, 0, 0, 0, 0);
-  mai.variablesUpdate(0, 0, 0, 0, 0, 0, 0, mai.x, 0, 0, 0, 0, 0, 0);
-  eai.variablesUpdate(0, 0, 0, 0, 0, 0, 0, 0, eai.x, 0, 0, 0, 0, 0);
-  screenSaver.variablesUpdate(0, 0, 0, 0, 0, 0, 0, 0, 0, screenSaver.x, 0, 0, 0, 0);
+  Button nightMode = new Button(infinite  .x+infinite  .w+referenceMes/2, infinite  .y, width/6, height/8, 0);
+  duoMode.variablesUpdate(0, 0, 0, 0, duoMode.x, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+  soloMode.variablesUpdate(0, 0, 0, 0, 0, soloMode.x, 0, 0, 0, 0, 0, 0, 0, 0);
+  Deathwish.variablesUpdate(0, 0, 0, 0, 0, 0, Deathwish.x, 0, 0, 0, 0, 0, 0, 0);
+  mPractice.variablesUpdate(0, 0, 0, 0, 0, 0, 0, mPractice.x, 0, 0, 0, 0, 0, 0);
+  ePractice.variablesUpdate(0, 0, 0, 0, 0, 0, 0, 0, ePractice.x, 0, 0, 0, 0, 0);
+  infinite  .variablesUpdate(0, 0, 0, 0, 0, 0, 0, 0, 0, infinite  .x, 0, 0, 0, 0);
   muteSong.variablesUpdate(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, muteSong.x, 0, 0, 0);
   muteSFX.variablesUpdate(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, muteSFX.x, 0, 0);
   nightMode.variablesUpdate(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, nightMode.x, 0);
   //
-  shapes.add(onePlayer);//Element 3, onePlayer
-  shapes.add(twoPlayer);//Element 4, twoPlayer
-  shapes.add(hai);//Element 5, hard ai
-  shapes.add(mai);//Element 6, medium ai
-  shapes.add(eai);//Element 7, easy ai
-  shapes.add(screenSaver);//Element 8, screenSaver
+  shapes.add(soloMode);//Element 3, soloMode
+  shapes.add(duoMode);//Element 4, duoMode
+  shapes.add(Deathwish);//Element 5, hard ai
+  shapes.add(mPractice);//Element 6, medium ai
+  shapes.add(ePractice);//Element 7, easy ai
+  shapes.add(infinite  );//Element 8, infinite  
   shapes.add(muteSong);//Element 9, muteSong
   shapes.add(muteSFX);//Element 10, muteSFX
   shapes.add(nightMode);//Element 11, nightMode

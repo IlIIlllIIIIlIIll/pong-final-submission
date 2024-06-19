@@ -30,10 +30,10 @@ class Paddle extends Rectangle {
   void mousePressed() {}//end mousePressed
   //
   void keyPressed() {
-    if (!onePlayer) {
-      twoPlayerKeyPressed();
-    } else if (!screenSaver) {
-      onePlayerKeyPressed();
+    if (!soloMode) {
+      duoModeKeyPressed();
+    } else if (!infinite  ) {
+      soloModeKeyPressed();
     } else {
       //empty no paddle movement
     }
@@ -77,8 +77,8 @@ class Paddle extends Rectangle {
   void paddleMove() {
     if (paddleUp) paddleUp();
     if (paddleDown) paddleDown();
-    if (onePlayer) rightPaddleAI(14);
-    if (screenSaver) screenSaver(14);
+    if (soloMode) rightPaddlePractice(14);
+    if (infinite  ) infinite  (14);
   }//end paddleMove
   void paddleUp() {
     y -= (paddleTravel);//moving up
@@ -88,51 +88,51 @@ class Paddle extends Rectangle {
     y += (paddleTravel);//moving down
     if (y > pay+pah-h) y = pay+pah-h;//error catch: will not go off screen
   }//end paddleDown
-  void rightPaddleAI(int b1) {
+  void rightPaddlePractice(int b1) {
     ballUpdate(shapes.get(b1).x, shapes.get(b1).y);
     if ( ballX > pam ) {
       if (x > pam) {
-        if (mai || eai) {
+        if (mPractice || ePractice) {
           mediumEasyai();
         } else {//impossible ai
-          hai();
+          Deathwish();
         }
       }
     }
-    errorCatchAi();
-  }//end rightPaddleAI
+    errorCatcDeathwish();
+  }//end rightPaddlePractice
   //
-  void screenSaver(int b1) {
+  void infinite  (int b1) {
     ballUpdate(shapes.get(b1).x, shapes.get(b1).y);
-    haimai();
+    DeathwishmPractice();
     if ( ballX > pam ) {
       if (x > pam) {//rightPaddle
-        if (mai || eai) {
+        if (mPractice || ePractice) {
           mediumEasyai();
         } else {//impossible ai
-          hai();
+          Deathwish();
         }
       }
     } else {
       if (x < pam) {//leftPaddle
-        if (mai || eai) {
+        if (mPractice || ePractice) {
           mediumEasyai();
         } else {//impossible ai
-          hai();
+          Deathwish();
         }
       }
     }
-    errorCatchAi();
-  }//end screenSaver
-  void haimai() {
+    errorCatcDeathwish();
+  }//end infinite  
+  void DeathwishmPractice() {
     float whatToPick = random(200);
     if (whatToPick > 50) { 
-      mai = true;
+      mPractice = true;
     } else {
-      mai = false;
+      mPractice = false;
     }
   }
-  void hai() {
+  void Deathwish() {
     if (this.y+(this.h/2) <= (ballY) || this.y+(this.h/2) >= (ballY)) {
       if (this.y+(h/2) <= (ballY)) {//medium Ai
         this.y += this.paddleTravel;
@@ -140,10 +140,10 @@ class Paddle extends Rectangle {
         this.y -= this.paddleTravel;
       }
     }
-  }//end hai
+  }//end Deathwish
   void mediumEasyai() {
     float demarcation = 0;//degree to which the paddle will miss
-    if (mai) {//medium ai
+    if (mPractice) {//medium ai
       demarcation = random(pah);//degree to which the paddle will miss
     } else {//easy ai
       demarcation = random(pah*2);//degree to which the paddle will miss
@@ -156,7 +156,7 @@ class Paddle extends Rectangle {
       }
     }
   }//end mediumEasyai
-  void errorCatchAi() {
+  void errorCatcDeathwish() {
     if (this.y < pay || this.y > pay+pah-this.h) {//error catch
       if (this.y < pay) {
         this.y = pay;
@@ -164,12 +164,12 @@ class Paddle extends Rectangle {
         this.y = pay+pah-this.h;
       }
     }
-  }//end errorCatchAi
+  }//end errorCatcDeathwish
   void ballUpdate(float v0, float v1) {
     ballX = v0;
     ballY = v1;
   }//end ballUpdate
-   void twoPlayerKeyPressed() {
+   void duoModeKeyPressed() {
     if (x < pam) {
       if (key == 'w' || key == 'W') {
         this.paddleDown = false;
@@ -189,8 +189,8 @@ class Paddle extends Rectangle {
         this.paddleDown = true;
       }
     }
-  }//end twoPlayerKeyPressed
-  void onePlayerKeyPressed() {
+  }//end duoModeKeyPressed
+  void soloModeKeyPressed() {
     if (x < pam) {
       if (key == 'w' || key == 'W') {
         this.paddleDown = false;
@@ -201,7 +201,7 @@ class Paddle extends Rectangle {
         this.paddleDown = true;
       }
     }
-  }//end onePlayerKeyPressed
+  }//end soloModeKeyPressed
   void paddle() {
     float goalX, goalW;
     float startPositionDifferent = 0.25;//has to be decimal

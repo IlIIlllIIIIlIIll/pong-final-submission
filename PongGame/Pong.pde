@@ -3,7 +3,7 @@ boolean pongOn = false;
 boolean pongGameOn = false;
 boolean winConLeft = false;
 boolean winConRight = false;
-boolean onePlayer = false;
+boolean soloMode = false;
 int pauseStartTime;
 int delayTime = 3000;
 boolean isDelayed = false;

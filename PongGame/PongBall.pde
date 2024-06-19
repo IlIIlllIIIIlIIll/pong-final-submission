@@ -128,12 +128,12 @@ class Ball extends Circle {
         winConLeft = true;
         toCenter(14, 15);
         delayedCode();
-        //if (!onePlayer && !screenSaver) pongGameOn = false;
+        //if (!soloMode && !infinite  ) pongGameOn = false;
       } else {
         winConRight = true;
         toCenter(14, 15);
         delayedCode();
-        //if (!onePlayer && !screenSaver) pongGameOn = false;
+        //if (!soloMode && !infinite  ) pongGameOn = false;
       }
         
       }
