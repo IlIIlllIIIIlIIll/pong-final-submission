@@ -1,62 +1,62 @@
-# Sandbox-Pong-Game-On
----
-CS30 object orientated programming Project
 
-# Features Present
----
- - Main menu user interface
-   - Pong button
-     - moves user to the game mode selection screen and back to the menu
-   - exit button
-     - exits the program
-   - title text
-     - displayes the title
- - Game mode selection screen
-   - two player option:
-     - both left and right paddles that are moved by human input
-   - one player options:
-     - hard ai player to play against a human player
-     - medium ai player to play against a human player
-     - easy ai player to play against a human player
-   - screen saver option:
-     - two ai players who can score against eachother
-   - night mode option:
-     - changes the color palette to remove blue light
-   - Mute song option:
-     - Button that mutes background music
-     - Button unmutes the background music upon second click
-   - Mute sound effects option:
-     - Button that mutes sound effects
-     - Button unmutes the sound effects upon second click
- - Pong Game user interface
-   - pause game button
-     - stops the movement of the paddles and ball
-     - displays text indicating a pause
-   - Reset game button
-     - resets the score board
- - Moveable paddles
-   - keys 'w' or 'W' results in the left paddle moving up
-   - keys 's' or 'S' results in the left paddle moving down
-   - keys 'up arrow' results in the right paddle moving up
-   - keys 'down arrow' results in the right paddle moving down
- - Functioning ball
-   - ball will choose a random starting angle and move to the edges of the pong table
-   - ball will bounce off of both right and left paddles
- - Score board
-   - Score board will track and display the points of both players
- - Temporary pause three second pause between scores
-   - Count down
-     - Durring the temporary pause a count down to the game restarting will initiate
- - Firework effect
-   - upon a player scoring, varing in color and size, balls will be drawn effected by gravity to celebrate a score
- - Sound
-   - background song
-   - sound effects
-     - sound effects play upon a score
-       - upon achieveing more than 5 scores the sound effect changes
-     - sound effects play upon a collision with the paddle
- - Text
-# Easter Eggs Pong Features
- ---
- - Second ball
-   - a second ball will appear upon clicking on the pong table while the game is not paused
+## CS30 Object-Oriented Programming Project
+
+## Features
+
+### Main Menu
+- **Pong Button**
+  - Navigates to the game mode selection screen and back to the menu.
+- **Exit Button**
+  - Exits the program.
+- **Title Text**
+  - Displays the game title.
+
+### Game Mode Selection Screen
+- **Two-Player Mode**
+  - Both paddles are controlled by human players.
+- **One-Player Modes**
+  - **Hard AI**: Play against a hard AI opponent.
+  - **Medium AI**: Play against a medium AI opponent.
+  - **Easy AI**: Play against an easy AI opponent.
+- **Screen Saver Mode**
+  - Two AI players compete against each other.
+- **Night Mode**
+  - Changes the color palette to reduce blue light.
+- **Mute Music Option**
+  - Button to mute and unmute background music.
+- **Mute Sound Effects Option**
+  - Button to mute and unmute sound effects.
+
+### Pong Game Interface
+- **Pause Game Button**
+  - Stops the movement of paddles and ball, displays "Paused" text.
+- **Reset Game Button**
+  - Resets the scoreboard.
+
+### Controls
+- **Left Paddle**
+  - 'W' or 'w' to move up.
+  - 'S' or 's' to move down.
+- **Right Paddle**
+  - Up arrow to move up.
+  - Down arrow to move down.
+
+### Game Mechanics
+- **Ball**
+  - Starts at a random angle and moves across the table.
+  - Bounces off the paddles.
+- **Scoreboard**
+  - Tracks and displays points for both players.
+- **Temporary Pause**
+  - A three-second countdown occurs between scores.
+
+### Visual and Audio Effects
+- **Fireworks**
+  - Displays colorful, gravity-affected balls when a player scores.
+- **Sound**
+  - Background music.
+  - Sound effects for paddle collisions.
+
+## Easter Eggs
+- **Second Ball**
+  - A second ball appears when clicking the pong table while the game is not paused.
