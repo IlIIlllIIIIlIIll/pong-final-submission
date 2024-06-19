@@ -29,7 +29,7 @@ class PongPlayArea extends Rectangle {
   void reset() {}//end reset
   //
   color backgroundColor() { //See Night Mode
-    color Color=#050500;
+    color Color=#402E7A;
     return Color;
   }//end backgroundColor
   //Getters and Setters

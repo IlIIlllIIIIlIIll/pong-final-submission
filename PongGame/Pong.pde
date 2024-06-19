@@ -19,12 +19,12 @@ void setupPong() {
   Paddle secondPaddle = new Paddle(0, 0, 0, 0, 0);
   firstPaddle.variablesUpdate( pongPlayArea.x+(pongPlayArea.w/2), width/10, firstBall.w, pongPlayArea.y, pongPlayArea.h, 0, 0, 0, 0, 0, 0, 0, 0, 0);
   secondPaddle.variablesUpdate( pongPlayArea.x+pongPlayArea.w/2, width*9/10, firstBall.w, pongPlayArea.y, pongPlayArea.h, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-  ScoreKeep leftScoreKeep = new ScoreKeep(0, height/10+height/14+(refMeasure/2), 0, 0, 0);
-  ScoreKeep rightScoreKeep = new ScoreKeep(width/2, leftScoreKeep.y+leftScoreKeep.h+(refMeasure/2), 0, 0, 0);
-  leftScoreKeep.variablesUpdate(leftScoreKeep.y, rightScoreKeep.y, pongPlayArea.x+(pongPlayArea.w/2), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-  rightScoreKeep.variablesUpdate(leftScoreKeep.y, rightScoreKeep.y, pongPlayArea.x+(pongPlayArea.w/2), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
-  Button pauseGame = new Button(refMeasure, height/10, height/8, height/14, 0); 
-  Button resetScore = new Button(refMeasure, rightScoreKeep.y+rightScoreKeep.h+(refMeasure/2), height/8, height/14, 0);
+  ScoreKeep leftScoreKeep = new ScoreKeep(0, height/10+height/11+(referenceMes/2), 0, 0, 0);
+  ScoreKeep rightScoreKeep = new ScoreKeep(0, leftScoreKeep.y+leftScoreKeep.h+(referenceMes/2), 0, 0, 0);
+  leftScoreKeep.variablesUpdate(leftScoreKeep.y, rightScoreKeep.y, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+  rightScoreKeep.variablesUpdate(leftScoreKeep.y, rightScoreKeep.y, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+  Button pauseGame = new Button(referenceMes, height/10, height/8, height/14, 0); 
+  Button resetScore = new Button(referenceMes, rightScoreKeep.y+rightScoreKeep.h+(referenceMes/2), height/8, height/14, 0);
   RectText countDown = new RectText(pongPlayArea.x+(pongPlayArea.w/2)-height/4, pongPlayArea.y+(pongPlayArea.h/2)-height/4, height/2, height/2, 0);
   RectText pausedGameText = new RectText(pongPlayArea.x+(pongPlayArea.w/2)-height/4, pongPlayArea.y+(pongPlayArea.h/2)-height/12, height/2, height/6, background);
   countDown.variablesUpdate(0, countDown.x, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);

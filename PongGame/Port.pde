@@ -1,6 +1,6 @@
 //Global Variables
 boolean portOn = true;
-float refMeasure;
+float referenceMes;
 boolean nightMode = false;
 color strokeColor = #d00909;
 color background; //= #d00909;
@@ -8,9 +8,9 @@ color secondaryColor;// = #280137;
 color hoverOver;// = #FF5733;
 //
 void setupPort() {
-  refMeasure = width/50;
+  referenceMes = width/50;
   Button quit = new Button(width-width/10, 0, width/10, height/14, 0); 
-  Button menuToPong = new Button(width/2 - width/12, (refMeasure), width/6, height/20, 0);
+  Button menuToPong = new Button(width/2 - width/12, (referenceMes), width/6, height/20, 0);
   RectText title = new RectText(width/2-(width*4/10), height/10, width*4/5, height/5, secondaryColor);
   quit.variablesUpdate(quit.x, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
   menuToPong.variablesUpdate(0, menuToPong.x, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
