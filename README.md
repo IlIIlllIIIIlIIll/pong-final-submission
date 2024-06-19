@@ -1,5 +1,3 @@
-# Creating the content for the text file
-content = """# Sandbox Pong Game
 
 ## CS30 Object-Oriented Programming Project
 
